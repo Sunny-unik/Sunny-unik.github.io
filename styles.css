@@ -1,0 +1,29 @@
+:root {
+  --accentColor: #7531ff;
+}
+
+body {
+  font-family: "Google Sans", system-ui, serif, "Courier New", Courier,
+    monospace;
+  line-height: 1.5;
+  padding: 2rem 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.m-inline-auto {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
