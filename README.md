@@ -6,7 +6,7 @@
 
 </div>
 
-### This project is inspired by [rahuldkjain/github-profile-readme-generator](https://github.com/rahuldkjain/github-profile-readme-generator).
+### This project is inspired by [cobiwave/simplefolio](https://github.com/cobiwave/simplefolio).
 
 # Deployment
 
