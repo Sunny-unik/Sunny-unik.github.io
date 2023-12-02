@@ -16,11 +16,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check-out repository
         uses: actions/checkout@v2
-        
+
       # Runs a single command using the runners shell
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.2
-        
+        uses: actions/setup-node@v2.5.3
+
       # Install project
       - name: Install project
         run: npm install
@@ -28,10 +28,10 @@ jobs:
       # Build project
       - name: Build project
         run: npm run gh-pages-build
-        
+
       # Push to Github Pages
       - name: Github Pages
-        uses: crazy-max/ghaction-github-pages@v2.1.3
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           # Build directory to deploy
           build_dir: dist
