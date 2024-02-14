@@ -34,8 +34,12 @@ a:hover {
   }
 }
 
-.dark-blue-text {
-  color: $dark-blue-text !important;
+.navy-text {
+  @if $themeMode == "light" {
+    color: $dark-blue-text !important;
+  } @else {
+    color: $white-color !important;
+  }
 }
 
 .text-color-main {

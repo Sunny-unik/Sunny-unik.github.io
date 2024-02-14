@@ -81,3 +81,14 @@ ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
     @content;
   }
 }
+
+// theme Colors
+@mixin color {
+  @if $themeMode == "light" {
+    background: $white-color;
+    color: $dark-blue-text;
+  } @else {
+    background: $dark-grey;
+    color: $white-color;
+  }
+}
