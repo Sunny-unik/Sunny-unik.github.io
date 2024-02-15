@@ -1,5 +1,3 @@
-$themeMode: "light";
-
 // COLORS
 $primary-color: #02aab0;
 $secondary-color: #0253b0;
@@ -15,3 +13,18 @@ $dark-blue-text: #272341; // For Headings
 $default-font-size: 1.6rem;
 $big-font-size: 4rem;
 $mid-font-size: 2.5rem;
+
+// apply preferred theme colors
+:root {
+  --themeMode: light;
+  --theme-color: #0d1117;
+  --theme-bg: #fff;
+  --theme-highlight-text: #272341; // For Headings
+}
+
+[data-theme="dark"] {
+  --themeMode: dark;
+  --theme-color: #fff;
+  --theme-bg: #0d1117;
+  --theme-highlight-text: #fff; // For Headings
+}

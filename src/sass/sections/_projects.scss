@@ -1,5 +1,5 @@
 #projects {
-  @include color();
+  @include applyThemeColors();
   margin-top: -10rem;
   padding-top: 15rem;
 
