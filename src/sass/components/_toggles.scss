@@ -33,7 +33,7 @@
 }
 
 .fa-sun-o {
-  color: $white-color;
+  color: yellow;
 }
 
 .checkbox-label .ball {
@@ -49,4 +49,5 @@
 
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
+  background-color: var(--theme-bg);
 }
