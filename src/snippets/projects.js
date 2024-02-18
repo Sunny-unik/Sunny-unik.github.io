@@ -1,7 +1,7 @@
 import { updateHtml } from "../scripts/addDynamicContent";
 
 export default function addProjects() {
-  let projectSnippet = `<div class="row">
+  const projectSnippet = `<div class="row">
   <div class="col-lg-4 col-sm-12">
     <div class="project-wrapper__text load-hidden">
       <h3 class="project-wrapper__text-title">{{title}}</h3>
@@ -72,10 +72,10 @@ export default function addProjects() {
         "https://sunny-unik.github.io/glimpse/screenshots/homeScreen.png",
     },
   ];
-
-  let finalHtml = "";
-  finalHtml += projects.map((project) => updateHtml(project, projectSnippet));
+  const finalProjects = projects.map((project) =>
+    updateHtml(project, projectSnippet)
+  );
   document
     .querySelector(".project-wrapper")
-    .insertAdjacentHTML("beforeend", finalHtml);
+    .insertAdjacentHTML("beforeend", finalProjects.join(""));
 }
