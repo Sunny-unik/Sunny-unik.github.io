@@ -27,4 +27,8 @@ $mid-font-size: 2.5rem;
   --theme-color: #fff;
   --theme-bg: #0d1117;
   --theme-highlight-text: #fff; // For Headings
+
+  .invert {
+    filter: invert(100%);
+  }
 }
