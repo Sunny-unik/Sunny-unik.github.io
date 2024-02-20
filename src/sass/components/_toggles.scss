@@ -14,9 +14,6 @@
     $primary-color 0%,
     $secondary-color 100%
   );
-  @include respond(phone) {
-    background-image: none;
-  }
   width: 50px;
   height: 26px;
   border-radius: 50px;
