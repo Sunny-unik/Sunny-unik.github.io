@@ -26,6 +26,32 @@
       border-radius: 10px;
       text-align: center;
       margin-bottom: 2rem;
+      position: relative;
+
+      &:hover::after {
+        content: attr(data-skill-name);
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        background-color: var(--theme-color);
+        color: var(--theme-bg);
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-size: 12px;
+        z-index: 1;
+      }
+
+      &:hover::before {
+        content: "";
+        position: absolute;
+        top: calc(0% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: var(--theme-color) transparent transparent transparent;
+      }
     }
 
     .skill h4 {
