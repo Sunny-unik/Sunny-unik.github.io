@@ -32,7 +32,7 @@ jobs:
 
       # Build project
       - name: Build project
-        run: npm run gh-pages-build && echo "sunny.is-a.dev" > CNAME
+        run: npm run gh-pages-build && echo "sunny.is-a.dev" > dist/CNAME
 
       # Push to Github Pages
       - name: Github Pages
