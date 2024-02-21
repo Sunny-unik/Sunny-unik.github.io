@@ -34,6 +34,10 @@ jobs:
       - name: Build project
         run: npm run gh-pages-build
 
+      # Copy CNAME file
+      - name: Copy CNAME file
+        run: cp CNAME CNAME
+
       # Push to Github Pages
       - name: Github Pages
         uses: crazy-max/ghaction-github-pages@v4
