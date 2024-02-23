@@ -1,0 +1,314 @@
+#workexperience {
+  padding: 0px 0px 25px 0px;
+  @include applyThemeColors();
+  padding-bottom: 15rem;
+
+  .fullWidth {
+    width: 100%;
+    display: table;
+    float: none;
+    padding: 0;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.exp-timeline {
+  padding: 0;
+  list-style: none;
+  position: relative;
+  margin: 60px 30px 0 0;
+  @include respond(phone) {
+    margin-inline: 30px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    bottom: 0;
+    width: 10px;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    left: 11.5%;
+    height: 100%;
+  }
+
+  li:last-child:before {
+    content: initial;
+  }
+
+  > li .exp-time {
+    display: block;
+    width: 25%;
+    padding-right: 100px;
+    position: absolute;
+  }
+
+  > li .exp-time span {
+    display: block;
+    text-align: right;
+  }
+
+  > li .exp-time span:first-child {
+    font-size: 0.9em;
+    color: #bdd0db;
+  }
+
+  > li .exp-time span:last-child {
+    font-size: 2.9em;
+    color: #3594cb;
+  }
+
+  > li:nth-child(odd) .exp-time span:last-child {
+    color: #6cbfee;
+  }
+
+  > li .exp-label {
+    margin: 0 0 15px 25%;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    color: #fff;
+    padding: 30px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    font-family: "Open Sans";
+    position: relative;
+    border-radius: 5px;
+    min-height: 150px;
+  }
+
+  > li:nth-child(odd) .exp-label {
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+  }
+
+  > li .exp-label h3 {
+    margin-top: 0px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    @include respond(phone) {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  }
+
+  > li .exp-label h4 {
+    opacity: 0.7;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 0px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 600;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: left;
+    @include respond(phone) {
+      font-size: 15px;
+    }
+  }
+
+  > li .exp-label h4 i {
+    margin-right: 5px;
+    vertical-align: middle;
+    @include respond(phone) {
+      font-size: 15px;
+    }
+  }
+
+  > li .exp-label:after {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    border-width: 10px;
+    top: 70px;
+  }
+
+  > li:nth-child(odd) .exp-label:after {
+    border-right-color: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+  }
+
+  > li .exp-icon {
+    width: 150px;
+    height: 150px;
+    top: 3%;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 1.4em;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #151515;
+    background: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    border-radius: 50%;
+    text-align: center;
+    left: 8%;
+    margin: 0 0 0 -25px;
+  }
+
+  li {
+    margin-bottom: 70px;
+    position: relative;
+  }
+}
+
+.sectionClassProject {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 80px 1.875em 3.125em;
+}
+
+.projectParagraph {
+  font-size: 18px;
+  margin: 0.5em 0 0;
+  font-family: "Source Sans Pro", serif;
+  text-align: justify;
+  @include respond(phone) {
+    text-align: left;
+  }
+}
+
+.projectParagraphLink {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  margin-top: 50px !important;
+  margin-bottom: 0px;
+  text-align: right;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.exp-icon img {
+  width: 100%;
+}
+
+.faPra {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 70px;
+  vertical-align: middle;
+  color: white;
+  line-height: 150px;
+}
+
+.label {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  color: #ffffff;
+  display: inline;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 5px 15px;
+}
+
+.date {
+  color: #bfc3c7;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  i {
+    margin-right: 8px;
+    vertical-align: top;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .exp-timeline {
+    &:before {
+      display: none;
+    }
+    > li .exp-time {
+      width: 100%;
+      position: relative;
+      padding: 0 0 20px 0;
+    }
+    > li .exp-time span {
+      text-align: left;
+    }
+    > li .exp-label {
+      margin: 30px 0 70px 0;
+      padding: 50px 30px 30px 30px;
+      font-weight: 400;
+      font-size: 95%;
+      float: left;
+    }
+    > li .exp-label:after {
+      right: auto;
+      border-right-color: transparent;
+      border-bottom-color: rgb(50, 68, 84);
+      top: -20px;
+    }
+    > li:nth-child(odd) .exp-label:after {
+      border-right-color: transparent;
+      border-bottom-color: rgb(43, 58, 72);
+      left: 65px;
+    }
+    > li:nth-child(even) .exp-label:after {
+      right: 65px;
+    }
+    > li:nth-child(odd) .exp-icon {
+      position: relative;
+      float: left;
+      left: auto;
+      margin: 0px 5px 0 0px;
+    }
+    > li:nth-child(even) .exp-icon {
+      position: relative;
+      float: right;
+      left: auto;
+      margin: 0px 5px 0 0px;
+    }
+    > li .exp-time span:last-child {
+      font-size: 1.5em;
+    }
+  }
+}
