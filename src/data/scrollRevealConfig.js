@@ -64,4 +64,18 @@ export const targetElements = [
       origin: "bottom",
     },
   },
+  {
+    element: ".exp-label",
+    animation: {
+      delay: 450,
+      origin: window.innerWidth > 900 ? "right" : "bottom",
+    },
+  },
+  {
+    element: ".exp-icon",
+    animation: {
+      delay: 450,
+      origin: window.innerWidth > 900 ? "bottom" : "top",
+    },
+  },
 ];
