@@ -1,7 +1,9 @@
+import addExperiences from "../snippets/experiences";
 import addProjects from "../snippets/projects";
 
 export default function () {
   addProjects();
+  addExperiences();
 }
 
 export const updateHtml = function (object, htmlString) {
