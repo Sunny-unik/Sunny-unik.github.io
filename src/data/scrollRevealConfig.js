@@ -18,14 +18,14 @@ export const targetElements = [
   {
     element: ".hero-title",
     animation: {
-      delay: 500,
+      delay: 450,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
   {
     element: ".hero-cta",
     animation: {
-      delay: 1000,
+      delay: 900,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
@@ -39,28 +39,28 @@ export const targetElements = [
   {
     element: ".about-wrapper__info",
     animation: {
-      delay: 1000,
+      delay: 800,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
   {
     element: ".project-wrapper__text",
     animation: {
-      delay: 500,
+      delay: 600,
       origin: window.innerWidth > 768 ? "left" : "bottom",
     },
   },
   {
     element: ".project-wrapper__image",
     animation: {
-      delay: 1000,
+      delay: 800,
       origin: window.innerWidth > 768 ? "right" : "bottom",
     },
   },
   {
     element: ".contact-wrapper",
     animation: {
-      delay: 800,
+      delay: 600,
       origin: "bottom",
     },
   },
