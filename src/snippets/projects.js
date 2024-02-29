@@ -3,7 +3,7 @@ import { updateHtml } from "../scripts/addDynamicContent";
 export default function addProjects() {
   const projectSnippet = `<div class="row">
   <div class="col-lg-4 col-sm-12">
-    <div class="project-wrapper__text load-hidden">
+    <div class="project-wrapper__text">
       <h3 class="project-wrapper__text-title">{{title}}</h3>
       <div>
         <p class="mb-4">{{description}}</p>
@@ -27,7 +27,7 @@ export default function addProjects() {
     </div>
   </div>
   <div class="col-lg-8 col-sm-12">
-    <div class="project-wrapper__image load-hidden">
+    <div class="project-wrapper__image">
       <a rel="noreferrer" href="{{link}}" target="_blank">
         <div
           data-tilt
@@ -54,6 +54,31 @@ export default function addProjects() {
         "https://raw.githubusercontent.com/Sunny-unik/Urlbit/master/screenshots/homeScreen.png",
     },
     {
+      title: "Eu-country-check: Npm package",
+      description:
+        "This package is to check if the given country-code/country-name is part of the EU (European Union) or EEA (European Economic Area).",
+      link: "https://npmjs.com/package/eu-country-check",
+      sourceLink: "https://github.com/Sunny-unik/eu-country-check",
+      imgSource:
+        "https://raw.githubusercontent.com/Sunny-unik/docs-eu-country-check/master/public/npmjsPage.png",
+    },
+    {
+      title: "Docs-eu-country-check",
+      description: "Official Documentations for `eu-country-check` npm-package",
+      link: "https://euc-check-docs.vercel.app/",
+      sourceLink: "https://github.com/Sunny-unik/docs-eu-country-check",
+      imgSource:
+        "https://raw.githubusercontent.com/Sunny-unik/docs-eu-country-check/master/public/homeScreen.png",
+    },
+    {
+      title: "Medical-Marketing",
+      description: "A website built on next.js with prismic legacy builder",
+      link: "https://medical-marketing.vercel.app/",
+      sourceLink: "https://github.com/Sunny-unik/medical-marketing",
+      imgSource:
+        "https://raw.githubusercontent.com/Sunny-unik/Medical-marketing/master/public/homeScreen.png",
+    },
+    {
       title: "Classic Restaurant",
       description:
         "This repo contains source code of classic restaurant website and solutions of a course named HTML5, CSS3, and Javascript for Web Developers. This course is listed on Coursera by The Johns Hopkins University. This website is built by using HTML5, CSS3, Bootstrap4, Ajax and Javascript. To deploy this site uses <a href='https://pages.github.com/' target='_blank' rel='noopener noreferrer'>github-pages </a>.",
@@ -71,7 +96,33 @@ export default function addProjects() {
       imgSource:
         "https://sunny-unik.github.io/glimpse/screenshots/homeScreen.png",
     },
+    {
+      title: "React-Template",
+      description: "Boilerplate to built single page applications using react",
+      link: "https://sunny-unik.github.io/React-template",
+      sourceLink: "https://github.com/Sunny-unik/React-Template",
+      imgSource:
+        "https://raw.githubusercontent.com/Sunny-unik/React-Template/master/public/homeScreen.png",
+    },
+    {
+      title: "SSR-with-routing",
+      description:
+        "Build to learn server routing in Server-Side-Rendered node-react app.",
+      link: "https://star-repos.vercel.app/",
+      sourceLink: "https://github.com/Sunny-unik/SSR-with-routing",
+      imgSource:
+        "https://raw.githubusercontent.com/Sunny-unik/SSR-with-routing/master/public/homeScreen.png",
+    },
+    {
+      title: "Gatsby-blog-tutorial",
+      description: "A blog website made to become familiar with gatsby.js",
+      link: "http://sunny-unik.github.io/gatsby-blog-tutorial/",
+      sourceLink: "https://github.com/Sunny-unik/gatsby-blog-tutorial",
+      imgSource:
+        "https://raw.githubusercontent.com/Sunny-unik/gatsby-blog-tutorial/master/src/images/hacktoberfestBlog.png",
+    },
   ];
+
   const finalProjects = projects.map((project) =>
     updateHtml(project, projectSnippet)
   );
