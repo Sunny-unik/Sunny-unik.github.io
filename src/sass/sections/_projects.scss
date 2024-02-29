@@ -8,16 +8,46 @@
     padding-top: 5rem;
   }
 
-  .flickity-enabled button {
-    @include respond(phone) {
-      background-color: transparent;
+  .flickity-enabled {
+    .flickity-page-dots .dot {
+      background: transparent;
+      border: 2px solid var(--theme-color);
     }
 
-    &:disabled {
-      display: none;
+    .flickity-page-dots .dot.is-selected {
+      background: var(--theme-color);
+    }
+
+    .flickity-button {
+      width: 30px;
+      height: 30px;
+      border-radius: 5px;
+      background: var(--theme-bg);
+
+      &:disabled {
+        display: none;
+      }
+
+      &:hover {
+        background: linear-gradient(
+          135deg,
+          $secondary-color 0%,
+          $primary-color 100%
+        );
+        @include respond(tab-port) {
+          background: transparent;
+        }
+      }
+
+      @include respond(phone) {
+        background-color: transparent;
+      }
+
+      .flickity-button-icon {
+        fill: var(--theme-color);
+      }
     }
   }
-
   .projects-nav {
     margin-top: 1rem;
 
@@ -47,9 +77,6 @@
       flex-wrap: nowrap;
       padding-inline: 1px;
 
-      @include respond(phone-xs) {
-        padding-inline: 0;
-      }
       @include respond(tab-port) {
         flex-direction: column-reverse;
 
