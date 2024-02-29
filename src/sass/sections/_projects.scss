@@ -3,19 +3,59 @@
   margin-top: -10rem;
   padding-top: 15rem;
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     margin-top: 0;
     padding-top: 5rem;
+  }
+
+  .flickity-enabled button {
+    @include respond(phone) {
+      background-color: transparent;
+    }
+
+    &:disabled {
+      display: none;
+    }
+  }
+
+  .projects-nav {
+    margin-top: 1rem;
+
+    .is-nav-selected {
+      border: 1rem dashed transparent;
+      border-radius: 1rem;
+      border-image: linear-gradient(
+          135deg,
+          $primary-color 0%,
+          $secondary-color 100%
+        )
+        10 stretch;
+    }
+  }
+
+  .project-nav-icons {
+    height: 150px;
+    width: 250px;
+    margin: 1rem;
+    position: relative;
   }
 
   .project-wrapper {
     @include respond(phone);
 
     .row {
-      margin-bottom: 8rem;
+      flex-wrap: nowrap;
+      padding-inline: 1px;
 
-      @include respond(phone) {
-        margin-bottom: 4rem;
+      @include respond(phone-xs) {
+        padding-inline: 0;
+      }
+      @include respond(tab-port) {
+        flex-direction: column-reverse;
+
+        .project-wrapper__image {
+          margin-bottom: 2rem;
+        }
       }
     }
 
@@ -25,7 +65,7 @@
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
       }
-      @include respond(tab-land) {
+      @include respond(tab-port) {
         margin-bottom: 4.8rem;
       }
 
@@ -48,7 +88,7 @@
       width: 90%;
       margin: 0 auto;
 
-      @include respond(tab-land) {
+      @include respond(tab-port) {
         width: 100%;
         margin: 0;
       }

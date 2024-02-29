@@ -1,4 +1,5 @@
 import { updateHtml } from "../scripts/addDynamicContent";
+import imagesLoaded from "imagesloaded";
 
 export default function addProjects() {
   const projectSnippet = `<div class="row">
@@ -123,10 +124,43 @@ export default function addProjects() {
     },
   ];
 
-  const finalProjects = projects.map((project) =>
-    updateHtml(project, projectSnippet)
-  );
-  document
-    .querySelector(".project-wrapper")
-    .insertAdjacentHTML("beforeend", finalProjects.join(""));
+  initProjectSliders(projectSnippet, projects);
+}
+
+function initProjectSliders(projectSnippet, projects) {
+  const notOnPhone = window.innerWidth > 600;
+  let projectDots = notOnPhone ? "<div class='projects-nav'>" : undefined;
+  const finalProjects = projects.map((project) => {
+    if (projectDots)
+      projectDots += `<img src='${project.imgSource}' alt='${project.title}' class='project-nav-icons' height='120px' width='240px'>`;
+    return updateHtml(project, projectSnippet);
+  });
+
+  const primarySliderOptions = notOnPhone
+    ? { pageDots: false }
+    : { adaptiveHeight: true };
+  const projectWrapper = document.querySelector(".project-wrapper");
+  projectWrapper.insertAdjacentHTML("beforeend", finalProjects.join(""));
+  const flkty = new Flickity(projectWrapper, primarySliderOptions);
+  !onresize &&
+    imagesLoaded(projectWrapper, function () {
+      flkty.resize();
+      flkty.reposition();
+    });
+  if (!notOnPhone) return false;
+
+  projectWrapper.insertAdjacentHTML("afterend", (projectDots += "</div>"));
+  const secondarySliderOptions = {
+    asNavFor: ".project-wrapper",
+    contain: true,
+    pageDots: false,
+    wrapAround: true,
+  };
+  const projectNavWrapper = document.querySelector(".projects-nav");
+  const flktyNav = new Flickity(projectNavWrapper, secondarySliderOptions);
+  !onresize &&
+    imagesLoaded(projectNavWrapper, function () {
+      flktyNav.resize();
+      flktyNav.reposition();
+    });
 }
