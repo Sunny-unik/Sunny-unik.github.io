@@ -18,21 +18,67 @@
     -webkit-clip-path: none;
   }
 
-  .contact-wrapper {
-    margin-top: 3.2rem;
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 3rem;
     padding: 0 2rem;
     backface-visibility: hidden;
+    @include respond(phone) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
 
     &__text {
       margin-bottom: 2.5rem;
-    }
-
-    &__text,
-    a {
       font-size: 2.4rem;
-
       @include respond(phone) {
         font-size: 2rem;
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      @include respond(phone) {
+        margin-bottom: 15px;
+      }
+    }
+
+    button[type="submit"] {
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      background: linear-gradient(
+        45deg,
+        $primary-color,
+        $dark-blue-text,
+        $secondary-color
+      );
+      background-size: 200%;
+      border-radius: 25px;
+      transition: background 0.5s ease-in-out;
+      padding: 10px 20px;
+
+      &:hover {
+        animation: glow 3.5s linear infinite;
+      }
+      @keyframes glow {
+        0% {
+          background-position: 0%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        100% {
+          background-position: 0% 0%;
+        }
       }
     }
   }

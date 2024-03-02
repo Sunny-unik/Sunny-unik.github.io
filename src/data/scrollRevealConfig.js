@@ -44,7 +44,28 @@ export const targetElements = [
     },
   },
   {
-    element: ".contact-wrapper",
+    element: ".contact-form__text",
+    animation: {
+      delay: 600,
+      origin: "top",
+    },
+  },
+  {
+    element: ".contact-form [placeholder]:nth-child(even)",
+    animation: {
+      delay: 600,
+      origin: "left",
+    },
+  },
+  {
+    element: ".contact-form [placeholder]:nth-child(odd)",
+    animation: {
+      delay: 600,
+      origin: "right",
+    },
+  },
+  {
+    element: ".contact-form button",
     animation: {
       delay: 600,
       origin: "bottom",

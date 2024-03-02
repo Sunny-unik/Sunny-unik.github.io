@@ -229,16 +229,29 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">Email to discuss anything</p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            class="cta-btn cta-btn--resume"
-            href="mailto:sunnygandhwani027@gmail.com"
-            >Write Email</a
-          >
-        </div>
+        <form class="contact-form load-hidden">
+          <p class="contact-form__text">Share your thoughts or inquiries.</p>
+          <input type="text" id="name" name="name" placeholder="Your Name" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+          />
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </section>
     <!-- /END Contact Section -->
