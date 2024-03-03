@@ -4,17 +4,27 @@ export default function () {
     .addEventListener("submit", function (event) {
       event.preventDefault();
 
+      const submitBtn = event.currentTarget.querySelector(
+        "button[type='submit']"
+      );
+      submitBtn.innerText = "loading...";
       const formData = Object.fromEntries(new FormData(this));
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:4000/send-email");
+      const errorHandler = () => {
+        alert(
+          "Failed to send message. Please try again later or send mail at sunnygandhwani027@gmail.com"
+        );
+        submitBtn.innerText = "Submit";
+      };
+
+      xhr.open("POST", "https://sunny-unik-server.vercel.app/send-email");
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.onload = function () {
-        alert(
-          xhr.status === 200
-            ? "Message sent successfully!"
-            : "Failed to send message. Please try again later."
-        );
+        if (xhr.status !== 200) return errorHandler();
+        alert("Message sent successfully!");
+        submitBtn.innerText = "Submit";
       };
+      xhr.onerror = errorHandler;
       xhr.send(JSON.stringify(formData));
     });
 }
