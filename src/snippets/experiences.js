@@ -11,8 +11,11 @@ export default function addExperiences() {
       <i class="fa fa-calendar"></i>{{date}}
     </div>
     <h4>
-      <i class="fa fa-flag"></i>{{company}} – {{location}} 
+      <i class="fa fa-flag"></i>{{company}} – {{jobType}} 
     </h4>
+    <h5>  
+      {{location}} - {{locationType}}
+    </h5>
         <p class="experienceDetails">
       {{description}}
     </p>
