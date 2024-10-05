@@ -1,0 +1,20 @@
+{
+  "name": "SSR-with-routing",
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+  "routes": [
+    {
+      "src": "/((?!.*\\.\\w+$).*)",
+      "dest": "/index.js"
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "master": true,
+      "prod": false,
+      "dev": false,
+      "patch": false,
+      "gh-pages": false
+    }
+  }
+}
