@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Urlbit: A Url Shortener",
+    "description": "A URL shortener web-app ready for Open Source contribution. This app is using Express as server, Ejs as templating language, MongoDB for database. This service is deployed on free tier of <a href='http://render.com' target='_blank' rel='noopener noreferrer'>render.com</a>.",
+    "link": "https://urlbit.onrender.com/",
+    "sourceLink": "https://github.com/Sunny-unik/Urlbit",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/Urlbit/master/screenshots/homeScreen.png"
+  },
+  {
+    "title": "Eu-country-check: Npm package",
+    "description": "This package is to check if the given country-code/country-name is part of the EU (European Union) or EEA (European Economic Area). This is published on <a href='https://npmjs.com/' target='_blank'  rel='noopener noreferrer'> npmjs.com. </a>.",
+    "link": "https://npmjs.com/package/eu-country-check",
+    "sourceLink": "https://github.com/Sunny-unik/eu-country-check",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/docs-eu-country-check/master/public/npmjsPage.png"
+  },
+  {
+    "title": "Docs-eu-country-check",
+    "description": "Official Documentations for `eu-country-check` package. This is server side rendered web-app built using node.js, express & react.",
+    "link": "https://euc-check-docs.vercel.app/",
+    "sourceLink": "https://github.com/Sunny-unik/docs-eu-country-check",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/docs-eu-country-check/master/public/homeScreen.png"
+  },
+  {
+    "title": "Medical-Marketing",
+    "description": "A server side rendered web-app built on next.js with prismic legacy builder. This app serves static pages as well as server side rendered pages according best case scenarios so page loads as quick as possible.",
+    "link": "https://medical-marketing.vercel.app/",
+    "sourceLink": "https://github.com/Sunny-unik/medical-marketing",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/Medical-marketing/master/public/homeScreen.png"
+  },
+  {
+    "title": "Classic Restaurant",
+    "description": "This repo contains source code of classic restaurant website and solutions of a course named HTML5, CSS3, and Javascript for Web Developers. This course is listed on Coursera by The Johns Hopkins University. This website is built by using HTML5, CSS3, Bootstrap4, Ajax and Javascript. To deploy this site uses <a href='https://pages.github.com/' target='_blank' rel='noopener noreferrer'>github-pages </a>.",
+    "link": "https://Sunny-unik.github.io/classic-restaurant",
+    "sourceLink": "https://github.com/Sunny-unik/classic-restaurant",
+    "imgSource": "https://Sunny-unik.github.io/classic-restaurant/images/homeScreen.png"
+  },
+  {
+    "title": "Glimpse: A Quick view to my portfolio",
+    "description": "A minimalistic view of my profile. Built using HTML5, CSS3 and Javascript. To deploy this site uses <a href='https://pages.github.com/' target='_blank'  rel='noopener noreferrer'> github-pages </a>.",
+    "link": "https://Sunny-unik.github.io/glimpse",
+    "sourceLink": "https://github.com/Sunny-unik/glimpse",
+    "imgSource": "https://sunny-unik.github.io/glimpse/screenshots/homeScreen.png"
+  },
+  {
+    "title": "React-Template",
+    "description": "Boilerplate to built single page applications using react. Tech-stack used Webpack as bundler, babel for transpile JS & github-pages for deployment.",
+    "link": "https://sunny-unik.github.io/React-template",
+    "sourceLink": "https://github.com/Sunny-unik/React-Template",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/React-Template/master/public/homeScreen.png"
+  },
+  {
+    "title": "SSR-with-routing",
+    "description": "Build to learn server routing in Server-Side-Rendered node-react app. Technologies used to build this application is Node, express, vercel, react & webpack.",
+    "link": "https://star-repos.vercel.app/",
+    "sourceLink": "https://github.com/Sunny-unik/SSR-with-routing",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/SSR-with-routing/master/public/homeScreen.png"
+  },
+  {
+    "title": "Gatsby-blog-tutorial",
+    "description": "A blog website made to become familiar with gatsby.js. This project is created by following <a href='https://www.gatsbyjs.com/docs/tutorial/getting-started/' target='_blank'  rel='noopener noreferrer'> official tutorials </a>.",
+    "link": "http://sunny-unik.github.io/gatsby-blog-tutorial/",
+    "sourceLink": "https://github.com/Sunny-unik/gatsby-blog-tutorial",
+    "imgSource": "https://raw.githubusercontent.com/Sunny-unik/gatsby-blog-tutorial/master/src/images/hacktoberfestBlog.png"
+  }
+]
