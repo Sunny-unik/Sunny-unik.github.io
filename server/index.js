@@ -1,6 +1,7 @@
 const http = require("http");
 const dotenv = require("dotenv");
 const { sendMailController } = require("./controllers/sendMailController");
+const { sendChatController } = require("./controllers/sendChatController");
 
 dotenv.config();
 const PORT = process.env.PORT || 3000;
@@ -9,7 +10,7 @@ const allowedPostRoutes = ["/send-email", "/send-chat"];
 const server = http.createServer((req, res) => {
   const requestOrigin = req.headers.origin;
   const corsHeaders = {
-    "Access-Control-Allow-Origin": requestOrigin,
+    "Access-Control-Allow-Origin": requestOrigin || "*",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
     "Access-Control-Allow-Headers": "Content-Type",
   };
@@ -28,12 +29,12 @@ const server = http.createServer((req, res) => {
     req.on("data", (chunk) => (body += chunk.toString()));
 
     req.on("end", () => {
-      const data = JSON.parse(body);
+      const data = body.trim().length ? JSON.parse(body.trim()) : {};
       const parameters = [corsHeaders, data, res];
       if (req.url === "/send-email") {
         sendMailController(...parameters);
       } else if (req.url === "/send-chat") {
-        sendMailController(...parameters);
+        sendChatController(...parameters);
       }
     });
   } else if (req.method === "GET") {
