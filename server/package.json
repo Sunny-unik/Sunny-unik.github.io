@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "dotenv": "^16.4.5",
-    "nodemailer": "^6.9.11"
+    "nodemailer": "^6.9.11",
+    "openai": "^4.82.0"
   }
 }

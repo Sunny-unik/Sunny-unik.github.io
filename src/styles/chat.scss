@@ -1,0 +1,124 @@
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #02aab0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  i {
+    font-size: 24px;
+  }
+}
+
+.chat-dialog {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+
+  &.open {
+    display: flex;
+  }
+
+  .chat-header {
+    padding: 15px;
+    background: #02aab0;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .close-chat {
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+
+  .chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+
+    .message {
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 15px;
+      max-width: 80%;
+      word-wrap: break-word;
+
+      &.user {
+        background: #e9ecef;
+        margin-left: auto;
+        border-bottom-right-radius: 5px;
+      }
+
+      &.bot {
+        background: #02aab0;
+        color: white;
+        margin-right: auto;
+        border-bottom-left-radius: 5px;
+      }
+    }
+  }
+
+  .chat-input {
+    padding: 15px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    gap: 10px;
+
+    input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 1px solid #ced4da;
+      border-radius: 20px;
+      outline: none;
+
+      &:focus {
+        border-color: #02aab0;
+      }
+    }
+
+    button {
+      padding: 8px 15px;
+      background: #02aab0;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #019399;
+      }
+
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
