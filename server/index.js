@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
   const corsHeaders = {
     "Access-Control-Allow-Origin": requestOrigin || "*",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Headers": "Content-Type, Accept",
   };
 
   if (req.method === "OPTIONS") {
@@ -23,14 +23,15 @@ const server = http.createServer((req, res) => {
       return res.end("Forbidden: Request from forbidden origin");
     }
     res.writeHead(200, corsHeaders);
-    res.end("ended");
+    res.end();
   } else if (req.method === "POST" && allowedPostRoutes.includes(req.url)) {
     let body = "";
     req.on("data", (chunk) => (body += chunk.toString()));
 
     req.on("end", () => {
       const data = body.trim().length ? JSON.parse(body.trim()) : {};
-      const parameters = [corsHeaders, data, res];
+      const isStreamRequest = req.headers.accept?.includes("text/event-stream");
+      const parameters = [corsHeaders, data, res, isStreamRequest];
       if (req.url === "/send-email") {
         sendMailController(...parameters);
       } else if (req.url === "/send-chat") {
