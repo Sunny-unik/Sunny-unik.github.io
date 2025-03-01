@@ -57,13 +57,14 @@ export default function initChat() {
     input.value = "";
 
     try {
-      const response = await fetch("http://localhost:4000/send-chat", {
-        method: "POST",
-        headers: {
-          Accept: "text/event-stream",
-        },
-        body: JSON.stringify({ message }),
-      });
+      const response = await fetch(
+        "https://sunny-unik-server.vercel.app/send-chat",
+        {
+          method: "POST",
+          headers: { Accept: "text/event-stream" },
+          body: JSON.stringify({ message }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to send message");
